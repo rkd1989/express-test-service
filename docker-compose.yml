@@ -1,0 +1,11 @@
+version: "3" # You can remove this line based on the warning, as it is obsolete
+
+services:
+  test-srv:
+    build:
+      context: . # Use the current directory for the build context
+    container_name: test-srv
+    ports:
+      - "5000:5000" # Map the host's port 3000 to the container's port 3000
+    environment:
+      - NODE_ENV=development
